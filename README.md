@@ -1,8 +1,8 @@
 # O-M-Dev-Logiciel
 
-Ce dépôt regroupe les artefacts de modélisation et de conception logicielle réalisés dans le cadre du module de développement logiciel. 
+Ce dépôt regroupe les modélisations de conception logicielle réalisés dans le cadre du module de développement logiciel. 
 
-Cette section est dédiée aux **diagrammes d'activités UML** modélisant le processus d'inscription et de réinscription au cycle doctoral (volets numérique et présentiel/réel).
+Cette section est dédiée aux **diagrammes d'activités UML** modélisant le processus d'inscription et de réinscription au cycle doctoral (numérique et réel).
 
 ---
 
