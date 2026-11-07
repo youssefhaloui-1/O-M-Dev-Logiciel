@@ -66,7 +66,7 @@ export function BookCard({
             }}
           >
             <BookOpen className="absolute right-4 top-4 text-white/30" size={28} />
-            <span className="font-display text-xl leading-tight text-white/95">{b.title}</span>
+            <span className="break-words font-display text-xl leading-tight text-white/95">{b.title}</span>
           </div>
           <div className="min-w-0 flex-1">
             <div className="flex items-start justify-between gap-2">
