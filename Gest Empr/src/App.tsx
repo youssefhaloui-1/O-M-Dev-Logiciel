@@ -130,7 +130,7 @@ export default function App() {
         <div className="mx-auto flex min-h-[72px] max-w-7xl flex-wrap items-center justify-between gap-3 px-4 py-3 sm:px-6">
           <div className="flex items-center gap-2.5">
             <Sparkles size={18} className="text-indigo-300" />
-            <span className="font-display text-xl">L'Atelier des Savoirs</span>
+            <span className="font-display text-lg sm:text-xl">L'Atelier des Savoirs</span>
           </div>
           {auth ? (
             <div className="flex items-center gap-3">
