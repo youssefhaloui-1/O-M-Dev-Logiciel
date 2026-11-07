@@ -196,7 +196,7 @@ export function Login({ onEnter }: { onEnter: (email: string, role: UserRole, re
             Accéder à la bibliothèque
           </Magnetic>
           </form>
-          <div className="mt-4 grid grid-cols-2 gap-2">
+          <div className="mt-4 grid gap-2 sm:grid-cols-2">
             <button
               onClick={() => onEnter("demo.consultant@usmba.ac.ma", "consultant", remember)}
               className="min-h-11 rounded-xl border border-white/10 bg-white/5 px-3 text-xs text-white/60 hover:bg-white/10 hover:text-white"
