@@ -133,7 +133,7 @@ export default function App() {
             <span className="font-display text-lg sm:text-xl">L'Atelier des Savoirs</span>
           </div>
           {auth ? (
-            <div className="flex items-center gap-3">
+            <div className="flex flex-wrap items-center justify-end gap-1.5 sm:gap-3">
               <span className="hidden text-xs text-white/45 sm:inline">
                 {isManager ? "Gérant" : "Consultant"}
               </span>
@@ -164,7 +164,7 @@ export default function App() {
                   sessionStorage.removeItem(STORAGE_KEYS.authRole);
                 }}
                 aria-label={`Se déconnecter de ${userEmail || "votre session"}`}
-                className="min-h-10 text-sm text-white/60 hover:text-white"
+                className="min-h-10 px-2 text-xs text-white/60 hover:text-white sm:px-0 sm:text-sm"
               >
                 Se déconnecter
               </button>
