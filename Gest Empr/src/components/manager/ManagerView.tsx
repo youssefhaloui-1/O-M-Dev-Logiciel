@@ -67,7 +67,7 @@ export function ManagerView({
       <div className="mb-6 flex flex-wrap items-end justify-between gap-4 sm:mb-8">
         <div>
           <p className="mb-1 text-xs uppercase tracking-[0.18em] text-indigo-300">Pilotage simplifié</p>
-          <h2 className="font-display text-4xl md:text-5xl">Centre de pilotage</h2>
+          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl">Centre de pilotage</h2>
         </div>
         <motion.div
           initial={{ opacity: 0, scale: 0.94 }}
@@ -79,7 +79,7 @@ export function ManagerView({
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-70" />
             <span className="relative h-2.5 w-2.5 rounded-full bg-emerald-400" />
           </span>
-          <span className="text-sm text-white/70">
+          <span className="text-xs text-white/70 sm:text-sm">
             Relances automatiques actives · prochain envoi 08:00
           </span>
         </Glass>
@@ -131,10 +131,10 @@ export function ManagerView({
         <Glass className="p-2 sm:p-3 lg:col-span-8">
           <div className="flex flex-wrap items-center gap-2 px-3 pb-2 pt-3">
             <h3 className="mr-auto font-display text-xl">Radar des retards</h3>
-            <label className="flex items-center gap-2 rounded-full border border-white/10 bg-black/10 px-3 py-2 text-xs text-white/55">
-              <Search size={14} /><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Rechercher…" aria-label="Rechercher un prêt" className="w-28 bg-transparent outline-none placeholder:text-white/25 sm:w-40" />
+            <label className="flex w-full items-center gap-2 rounded-full border border-white/10 bg-black/10 px-3 py-2 text-xs text-white/55 sm:w-auto">
+              <Search size={14} /><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Rechercher…" aria-label="Rechercher un prêt" className="w-full bg-transparent outline-none placeholder:text-white/25 sm:w-40" />
             </label>
-            <select value={filter} onChange={(event) => setFilter(event.target.value as typeof filter)} aria-label="Filtrer les prêts" className="rounded-full border border-white/10 bg-[#121827] px-3 py-2 text-xs text-white/70">
+            <select value={filter} onChange={(event) => setFilter(event.target.value as typeof filter)} aria-label="Filtrer les prêts" className="w-full rounded-full border border-white/10 bg-[#121827] px-3 py-2 text-xs text-white/70 sm:w-auto">
               <option value="all">Tous ({loans.length})</option>
               <option value="late">En retard ({lateCount})</option>
               <option value="soon">Échéance proche ({soonCount})</option>
@@ -172,11 +172,11 @@ export function ManagerView({
                   <div className="w-auto text-left sm:w-32 sm:text-right">
                     <GlowBadge level={lv} text={dueText(l.dueIn)} />
                   </div>
-                  <div className="grid grid-cols-3 gap-1.5 sm:flex">
+                  <div className="grid gap-1.5 min-[420px]:grid-cols-3 sm:flex">
                     <Magnetic
                       onClick={() => setInspect(l)}
                       aria-label={`Inspecter le prêt ${l.id}`}
-                      className="px-2 py-2 text-xs text-white/80 bg-white/8 hover:bg-white/15 sm:px-3 sm:py-1.5"
+                      className="w-full bg-white/8 px-2 py-2 text-xs text-white/80 hover:bg-white/15 sm:w-auto sm:px-3 sm:py-1.5"
                     >
                       <User size={13} />
                       Inspecter
@@ -185,7 +185,7 @@ export function ManagerView({
                       onClick={() => notify(l)}
                       disabled={sending === l.id || (l.notified && lv === "ok")}
                       aria-label={l.notified ? "Relance déjà envoyée" : `Notifier ${m.name}`}
-                      className={`px-2 py-2 text-xs ${
+                      className={`w-full px-2 py-2 text-xs sm:w-auto ${
                         l.notified
                           ? "bg-emerald-400/10 text-emerald-300"
                           : "bg-indigo-400/15 text-indigo-200 hover:bg-indigo-400/25"
@@ -216,7 +216,7 @@ export function ManagerView({
                     <Magnetic
                       onClick={() => setRet(l)}
                       aria-label={`Enregistrer le retour de ${b.title}`}
-                      className="bg-emerald-400/15 px-2 py-2 text-xs text-emerald-300 hover:bg-emerald-400/25 sm:px-3 sm:py-1.5"
+                     className="w-full bg-emerald-400/15 px-2 py-2 text-xs text-emerald-300 hover:bg-emerald-400/25 sm:w-auto sm:px-3 sm:py-1.5"
                     >
                       <PackageCheck size={13} />
                       Restituer
