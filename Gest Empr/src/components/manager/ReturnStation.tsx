@@ -59,14 +59,14 @@ export function ReturnStation({
             onClick={(e) => e.stopPropagation()}
             className="w-full max-w-lg"
           >
-            <Glass className="bg-[#0f1320]/90 p-7" glow="rgba(52,211,153,.4)">
+            <Glass className="bg-[#0f1320]/90 p-4 sm:p-7" glow="rgba(52,211,153,.4)">
               {!done ? (
                 <>
                   <h3 className="font-display text-2xl">Contrôle de conformité</h3>
                   <p className="mb-5 mt-1 text-sm text-white/50">
                     {book.title} · {loan.id}
                   </p>
-                  <div className="grid grid-cols-3 gap-3">
+                  <div className="grid gap-3 sm:grid-cols-3">
                     {opts.map((o) => (
                       <motion.button
                         key={o.k}
