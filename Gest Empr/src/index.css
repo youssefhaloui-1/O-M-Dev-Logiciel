@@ -67,3 +67,12 @@ input:focus-visible,
 .theme-light [class*="bg-white/"] {
   background-color: rgba(23, 32, 51, 0.06) !important;
 }
+input,
+select {
+  min-width: 0;
+}
+
+button,
+select {
+  touch-action: manipulation;
+}
