@@ -117,7 +117,7 @@ export function MemberView({
         <button onClick={openSpot} aria-label="Ouvrir la recherche du catalogue" className="mx-auto mt-7 flex min-h-12 w-full max-w-xl items-center gap-3 rounded-full border border-white/10 bg-white/5 px-5 py-4 text-left text-white/55 backdrop-blur-xl transition hover:border-indigo-400/40">
           <Search size={18} />
           <span className="flex-1 text-sm">Rechercher un ouvrage…</span>
-          <kbd className="rounded bg-white/10 px-2 py-0.5 text-xs">Ctrl K</kbd>
+          <kbd className="hidden rounded bg-white/10 px-2 py-0.5 text-xs sm:inline">Ctrl K</kbd>
         </button>
         <label className="mx-auto mt-4 flex w-full max-w-xl items-center gap-2 rounded-full border border-white/10 bg-black/10 px-4 py-2 text-left">
           <Search size={15} className="text-white/35" />
@@ -134,7 +134,7 @@ export function MemberView({
           <button type="button" onClick={() => setOnlyFavorites((value) => !value)} aria-pressed={onlyFavorites} className={`${onlyFavorites ? "bg-rose-400/15 text-rose-200" : "text-white/60"} inline-flex items-center gap-2 rounded-full border border-white/10 px-3 py-2 text-xs`}>
             <Heart size={14} fill={onlyFavorites ? "currentColor" : "none"} /> Favoris ({favorites.length})
           </button>
-          <span className="ml-auto text-xs text-white/45">{list.length} résultat{list.length === 1 ? "" : "s"}</span>
+          <span className="w-full text-xs text-white/45 sm:ml-auto sm:w-auto">{list.length} résultat{list.length === 1 ? "" : "s"}</span>
           <select value={sort} onChange={(e) => setSort(e.target.value as SortKey)} aria-label="Trier le catalogue" className="rounded-full border border-white/10 bg-[#121827] px-3 py-2 text-xs text-white/75">
             <option value="relevance">Pertinence</option>
             <option value="title">Titre A–Z</option>
