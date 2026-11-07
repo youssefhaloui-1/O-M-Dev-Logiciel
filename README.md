@@ -14,5 +14,4 @@ O-M-Dev-Logiciel/
 │   ├── Prem_Insc.png       # Diagramme 1 : Première Inscription (Wizard Candidat)
 │   ├── ReIns_Annuelle.png  # Diagramme 3 : Réinscription Annuelle des Doctorants
 │   └── Valid_MultiRole.png # Diagramme 2 : Pipeline de Validation Multi-Rôles
-├── .gitignore
 └── README.md
